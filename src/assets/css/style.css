@@ -7,3 +7,13 @@
 /* lg	64rem (1024px)	@media (width >= 64rem) { ... } */
 /* xl	80rem (1280px)	@media (width >= 80rem) { ... } */
 /* 2xl	96rem (1536px)	@media (width >= 96rem) { ... } */
+
+@layer base {
+    * {
+        @apply m-0 p-0 box-border border-purple-500
+    }
+
+    header {
+        @apply bg-red-500
+    }
+}

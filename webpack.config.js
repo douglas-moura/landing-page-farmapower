@@ -6,7 +6,7 @@ module.exports = {
     mode: 'development', // ou 'production'
     entry: './src/index.ts',
     output: {
-        filename: 'bundle.js',
+        filename: 'index.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true
     },
@@ -23,7 +23,7 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    'style-loader', // Injeta CSS no DOM durante o desenvolvimento
+                    MiniCssExtractPlugin.loader,
                     'css-loader', // Lê arquivos CSS
                     'postcss-loader', // Processa o CSS com plugins (incluindo Tailwind)
                 ],

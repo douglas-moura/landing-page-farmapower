@@ -18,6 +18,7 @@
     "mini-css-extract-plugin": "^2.9.2",
     "postcss": "^8.5.6",
     "postcss-loader": "^8.1.1",
+    "tailwindcss": "^3.4.17",
     "ts-loader": "^9.5.2",
     "typescript": "^5.8.3",
     "webpack": "^5.100.0",
@@ -25,8 +26,6 @@
     "webpack-dev-server": "^5.2.2"
   },
   "dependencies": {
-    "@tailwindcss/postcss": "^4.1.11",
-    "style-loader": "^4.0.0",
-    "tailwindcss": "^4.1.11"
+    "style-loader": "^4.0.0"
   }
 }
