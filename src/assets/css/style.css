@@ -10,10 +10,76 @@
 
 @layer base {
     * {
-        @apply m-0 p-0 box-border border-purple-500
+        @apply m-0 p-0 box-border border-0 border-purple-500
     }
 
-    header {
-        @apply bg-red-500
+    main {
+        @apply min-h-dvh
+    }
+
+    section, nav {
+        @apply w-full flex flex-col py-4
+    }
+
+    h1 {
+        @apply font-extrabold text-gray-900 text-2xl
+    }
+
+    h2 {
+        @apply text-2xl
+    }
+
+    h3 {
+        @apply text-xl
+    }
+
+    h4 {
+        @apply text-sm
+    }
+
+    h5 {
+        @apply text-xs
+    }
+
+    span {
+        @apply flex
+    }
+
+    p {
+        @apply text-neutral-400
+    }
+
+    a {
+        @apply cursor-pointer
+    }
+
+    input, textarea {
+        @apply outline-0 font-light
+    }
+
+    table {
+        @apply mb-8 last:mb-0
+    }
+}
+
+@layer components {
+    .container {
+        @apply grid gap-4 mx-auto w-5/6
+    }
+
+    .btn {
+        @apply p-4 rounded-lg bg-orange-500 text-white text-xl font-extrabold transition-all duration-150
+    }
+
+    .titulo-sessao {
+        @apply font-bold text-orange-600 mt-20 mb-4
+    }
+
+    .input-campo {
+        @apply relative flex flex-col
+    }
+
+    .menu-link {
+        @apply
     }
 }

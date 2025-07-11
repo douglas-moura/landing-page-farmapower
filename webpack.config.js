@@ -2,6 +2,8 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
+const isProduction = process.env.NODE_ENV === 'production'
+
 module.exports = {
     mode: 'development', // ou 'production'
     entry: './src/index.ts',
@@ -16,6 +18,10 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.html$/,
+                use: ['html-loader']
+            },
+            {
                 test: /\.ts$/,
                 use: 'ts-loader',
                 exclude: /node_modules/
@@ -23,17 +29,14 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
                     'css-loader', // Lê arquivos CSS
                     'postcss-loader', // Processa o CSS com plugins (incluindo Tailwind)
-                ],
+                ]
             },
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
                 type: 'asset/resource',
-                generator: {
-                    filename: 'assets/img/[name][ext]'
-                }
             }
         ]
     },
