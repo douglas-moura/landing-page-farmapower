@@ -1,34 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>1º Seminário FarmaPower</title>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <iconify-icon icon="tabler:menu-2" style="font-size: 18px" height="2em"></iconify-icon>
-                <picture>
-                    <img src="./assets/img/logo.png" width="50px" alt="">
-                </picture>
-                <ul class="container">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section>
-                <div class="text-3xl underline">Teste</div>
-                <div class="text-red-500 font-bold text-xl">Tailwind funcionando?</div>
-            </section>
-        </main>
-        <footer>
 
-        </footer>
-        <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1º Seminário FarmaPower</title>
+</head>
+
+<body>
+    <header>
+        <div class="container grid-cols-2">
+            <figure id="icone-abrir-menu" class="">
+                <iconify-icon icon="tabler:menu-2" class="text-3xl my-auto text-neutral-600 cursor-pointer"></iconify-icon>
+            </figure>
+            <picture class="flex-row justify-end">
+                <img src="./assets/img/logo.png" class="w-16" alt="">
+            </picture>
+        </div>
+        <nav id="menu" class="menu-lateral -translate-x-full -left-8">
+            <figure id="icone-fechar-menu" class="w-full flex flex-row justify-end">
+                <iconify-icon icon="tabler:x" class="text-3xl my-auto text-neutral-600 cursor-pointer"></iconify-icon>
+            </figure>
+            <ul class="mt-16 w-full">
+                <li class="menu-link">Temas</li>
+                <li class="menu-link">Palestrantes</li>
+                <li class="menu-link">Data</li>
+                <li class="menu-link">Inscreva-se</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="banner" class="bg-colorido bg-center bg-cover bg-no-repeat py-20">
+            <div class="container">
+                <h1 class="text-white">COMO A FORÇA DE VENDAS PODE SER O ELEMENTO TRANSFORMADOR?</h1>
+                <h4 class="text-white">Veja como aprender a engajar, inspirar e liderar equipes na era da inteligência artificial.</h4>
+                <button class="btn btn-primario">Participar</button>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h1 class="titulo-sessao">Conheça os palestrantes</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ipsam sequi eligendi dolor nobis sed harum, facilis nesciunt omnis quibusdam animi asperiores, aspernatur quaerat quos id perferendis incidunt. Sapiente, vitae.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <script src="./index.ts" type="text/javascript" charset="utf-8"></script>
+</body>
+
 </html>

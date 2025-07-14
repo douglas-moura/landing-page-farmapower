@@ -10,19 +10,27 @@
 
 @layer base {
     * {
-        @apply m-0 p-0 box-border border-0 border-purple-500
+        @apply m-0 p-0 box-border border-[0px] border-black
+    }
+
+    header {
+        @apply w-full py-2 bg-white border-b-[1px] border-neutral-200
     }
 
     main {
         @apply min-h-dvh
     }
 
-    section, nav {
-        @apply w-full flex flex-col py-4
+    section {
+        @apply w-full flex flex-col py-12 justify-between
+    }
+
+    figure, picture {
+        @apply flex
     }
 
     h1 {
-        @apply font-extrabold text-gray-900 text-2xl
+        @apply font-extrabold text-2xl leading-7
     }
 
     h2 {
@@ -46,7 +54,7 @@
     }
 
     p {
-        @apply text-neutral-400
+        @apply text-neutral-500 text-sm
     }
 
     a {
@@ -67,19 +75,37 @@
         @apply grid gap-4 mx-auto w-5/6
     }
 
+    .menu-lateral {
+        @apply menu-sombra bg-white fixed h-dvh top-0 p-6 w-2/3 flex flex-col justify-start transition-all duration-200 ease-in-out
+    }
+
+    .menu-link {
+        @apply py-2 px-4 my-[2px] w-auto rounded cursor-pointer text-neutral-600 hover:bg-neutral-100
+    }
+
     .btn {
-        @apply p-4 rounded-lg bg-orange-500 text-white text-xl font-extrabold transition-all duration-150
+        @apply px-2 py-4 my-4 bg-neutral-100 text-neutral-600 text-base font-bold transition-all duration-150
+    }
+
+    .btn-primario {
+        @apply text-[#1B1464] btn-sombra
     }
 
     .titulo-sessao {
-        @apply font-bold text-orange-600 mt-20 mb-4
+        @apply text-[#1B1464] mb-4 uppercase
     }
 
     .input-campo {
         @apply relative flex flex-col
     }
+}
 
-    .menu-link {
-        @apply
+@layer utilities {
+    .btn-sombra {
+        box-shadow: .7rem .7rem 0 #1B1464;
+    }
+
+    .menu-sombra {
+        box-shadow: .5rem 0rem 2rem rgba(20, 20, 20, .2);
     }
 }

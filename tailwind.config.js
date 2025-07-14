@@ -4,7 +4,11 @@ module.exports = {
         "./src/**/*.{html,js,ts,jsx,tsx,vue}"
     ],
     theme: {
-        extend: {},
+        extend: {
+            backgroundImage: {
+                'colorido': "url('/src/assets/img/bg-colorido.jpg')",
+            }
+        },
     },
     plugins: [],
 }
