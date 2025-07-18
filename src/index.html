@@ -63,7 +63,7 @@
             <div>
                 <div class="mb-4">
                     <p class="text-xs font-extrabold">Ingresso Seminário</p>
-                    <p class="text-3xl font-extrabold">Valor: R$ 790,00</p>
+                    <p class="text-xl lg:text-3xl font-extrabold">Valor: R$ 790,00</p>
                 </div>
                 <div>
                     <p>Escaneie o <strong>QR Code</strong> abaixo para pagar com Pix:</p>
@@ -83,18 +83,19 @@
         <div id="pelicula" class="pelicula hidden"></div>
 
         <section id="banner" class="bg-colorido min-h-[500px] bg-center bg-cover bg-no-repeat justify-center pt-48">
-            <div class="container">
-                <h1 class="text-white w-1/2">COMO A FORÇA DE VENDAS PODE SER O ELEMENTO TRANSFORMADOR?</h1>
-                <h3 class="text-white w-1/2">Veja como aprender a engajar, inspirar e liderar equipes na era da
-                    inteligência artificial.</h3>
-                <a href="/#form" class="scroll-smooth">
-                    <button class="btn btn-primario w-1/3">Participar</button>
-                </a>
+            <div class="container lg:grid-cols-3 xl:grid-cols-2">
+                <div class="lg:col-span-2 xl:col-span-1">
+                    <h1 class="text-white">COMO A FORÇA DE VENDAS PODE SER O ELEMENTO TRANSFORMADOR?</h1>
+                    <h3 class="text-white">Veja como aprender a engajar, inspirar e liderar equipes na era da inteligência artificial.</h3>
+                    <a href="/#form" class="scroll-smooth">
+                        <button class="btn btn-primario mt-8 w-1/2 xl:w-1/3">Participar</button>
+                    </a>
+                </div>
             </div>
         </section>
         <section id="intro" class="overflow-hidden">
-            <div class="container grid-cols-2 relative">
-                <div class="">
+            <div class="container relative lg:grid-cols-3 xl:grid-cols-2">
+                <div class="lg:col-span-2 xl:col-span-1">
                     <h2 class="titulo-sessao text-[#1B1464]">Você atua na indústria farmacêutica?</h2>
                     <p class="mb-6">Então, prepare-se para descobrir como a força de vendas pode ser o agente de transformação que sua liderança precisa.</p>
                     <p class="mb-6">Este é um encontro de transformação real para profissionais da indústria farmacêutica.</p>
@@ -103,7 +104,7 @@
                     <p class="font-extrabold">Mais do que um evento: é um projeto pensado para transformar sua trajetória profissional.</p>
                 </div>
                 <div class="flex">
-                    <img src="./assets/img/vendedor-transp.png" alt="" class="-bottom-28 w-[90%] object-cover absolute">
+                    <img src="./assets/img/vendedor-transp.png" alt="" class="-bottom-28 w-[90%] object-cover absolute hidden lg:block lg:-translate-x-[80px] xl:translate-x-0">
                 </div>
             </div>
         </section>
@@ -111,7 +112,7 @@
             <div class="container">
                 <h2 class="titulo-sessao text-white text-sombra">QUEM VAI TE ENTREGAR AS FERRAMENTAS:</h2>
                 <p class="text-white">Conheça os especialistas que vão conduzir você nesta jornada de transformação. Cada um dos nossos convidados traz uma bagagem sólida de conhecimento e experiência prática em suas respectivas áreas. São profissionais reconhecidos nacional e internacionalmente, preparados para oferecer conteúdo de alto nível, com aplicabilidade direta no seu dia a dia profissional.</p>
-                <div class="grid grid-cols-3 gap-8 mt-8">
+                <div class="grid gap-8 mt-8 lg:grid-cols-2 xl:grid-cols-3">
                     <div class="palestrante-container">
                         <img class="palestrante-img" src="./assets/img/perfil.jpg" alt="Wilson Borges">
                         <div class="palestrante-info">
@@ -170,7 +171,7 @@
             </div>
         </section>
         <section id="local">
-            <div class="container grid-cols-2">
+            <div class="container lg:grid-cols-2">
                 <div>
                     <h2 class="titulo-sessao text-[#1B1464]">Localização</h2>
                     <ul>
@@ -197,12 +198,12 @@
                     </ul>
                 </div>
                 <div class="flex justify-end">
-                    <div id="map" style="height: 500px; width: 480px;" class="rounded-xl z-30"></div>
+                    <div id="map" class="rounded-xl z-30" style="height: 500px; width: 100%;"></div>
                 </div>
             </div>
         </section>
         <section id="form" class="bg-[#1B1464] relative">
-            <div class="container grid-cols-2 gap-8">
+            <div class="container gap-8 lg:grid-cols-2">
                 <div>
                     <h2 class="titulo-sessao text-white">Inscreva-se Agora</h2>
                     <form action="" class="flex flex-col gap-4">
@@ -216,16 +217,13 @@
                     </form>
                     <ul class="mt-6 ml-6">
                         <li class="form-list">Preencha todos os campos do formulário com atenção.</li>
-                        <li class="form-list">Após o envio do formulário, você verá na tela um QR Code e uma chave Pix.
-                        </li>
-                        <li class="form-list"><strong>Importante:</strong> Após efetuar o pagamento, envie o comprovante
-                            via WhatsApp para o número 11 99723-2585.</li>
-                        <li class="form-list"><strong>Confirmação:</strong> Após o envio do comprovante, nossa equipe
-                            irá validar e confirmar sua inscrição em até 24h.</li>
+                        <li class="form-list">Após o envio do formulário, você verá na tela um QR Code e uma chave Pix.</li>
+                        <li class="form-list"><strong>Importante:</strong> Após efetuar o pagamento, envie o comprovante via WhatsApp para o número 11 99723-2585.</li>
+                        <li class="form-list"><strong>Confirmação:</strong> Após o envio do comprovante, nossa equipe irá validar e confirmar sua inscrição em até 24h.</li>
                     </ul>
                 </div>
-                <div class="flex justify-end">
-                    <ul class="w-3/4 my-auto">
+                <div class="flex justify-end mt-8 xl:mt-0">
+                    <ul class="my-auto w-full xl:w-3/4">
                         <li class="ticket-list">
                             <div>
                                 <h3>Lote 001</h3>
@@ -257,7 +255,7 @@
         <footer class="bg-[#1B1464]">
             <section>
                 <div class="container">
-                    <div class="flex justify-between items-center">
+                    <div class="flex justify-between items-center gap-4 flex-col xl:flex-row">
                         <div class="rodape-info">
                             <p class="text-white text-xs">1º Seminário FarmaPower</p>
                         </div>
