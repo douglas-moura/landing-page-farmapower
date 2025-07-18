@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>1º Seminário FarmaPower</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <title>1º Seminário FarmaPower</title>
+</head>
 
-    <body>
-        <header>
-            <!--
+<body>
+    <header>
+        <!--
             <div class="container grid-cols-2">
                 <figure id="icone-abrir-menu" class="">
                     <iconify-icon icon="tabler:menu-2" class="text-3xl my-auto text-neutral-600 cursor-pointer"></iconify-icon>
@@ -30,222 +32,272 @@
                 </ul>
             </nav>
             -->
-            <div class="container grid-cols-3">
-                <picture class="flex-row">
-                    <img src="./assets/img/logo.png" class="w-24" alt="">
-                </picture>
-                <nav class="col-span-2">
-                    <ul class="flex flex-row justify-end items-center h-full w-full gap-2 text-neutral-600">
-                        <a href="/#banner" class="scroll-smooth"><li class="menu-link-desk">Início</li></a>
-                        <a href="/#palestrantes" class="scroll-smooth"><li class="menu-link-desk">Palestrantes</li></a>
-                        <a href="/#local" class="scroll-smooth"><li class="menu-link-desk">Data e Hora</li></a>
-                        <a href="/#form" class="scroll-smooth"><li class="menu-link-desk">Inscreva-se</li></a>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <main>
-            <a href="/#banner" class="scroll-smooth">
-                <iconify-icon class="fixed bottom-0 right-0 z-30 text-3xl text-white m-8 bg-[#1B1464] p-2 rounded-full" icon="tabler:arrow-up"></iconify-icon>
-            </a>
-
-            <aside id="p-lateral" class="painel-lateral translate-x-full">
-                <div>
-                    <div class="mb-4">
-                        <p class="text-xs font-extrabold">Ingresso Seminário</p>
-                        <p class="text-3xl font-extrabold">Valor: R$ 790,00</p>
-                    </div>
-                    <div>
-                        <p>Escaneie o <strong>QR Code</strong> abaixo para pagar com Pix:</p>
-                        <img src="./assets/img/textura.png" class="p-4 my-4 border-2 w-1/2 border-black aspect-square" />
-                        <p>Ou se preferir, utilize a Chave Pix:<br><strong>CNPJ 00.000/0001-00</strong></p>
-                    </div>
-                    <ul class="mt-6 ml-6">
-                        <li class="pix-list"><strong>Abra o aplicativo do seu banco</strong> ou carteira digital.</li>
-                        <li class="pix-list">Escolha a opção <strong>Pix > Pagar com QR Code.</strong></li>
-                        <li class="pix-list"><strong>Aponte a câmera</strong> para o QR Code acima <strong>OU</strong> cole a chave Pix no campo indicado.</li>
-                        <li class="pix-list">Confira os <strong>dados de pagamento</strong> (nome do recebedor, valor e descrição).</li>
-                        <li class="pix-list">Finalize a transação normalmente.</li>
-                        <li class="pix-list"><strong>Envie o comprovante de pagamento</strong> para o WhatsApp: 11 99723-2585 informando seu nome completo.</li>
-                    </ul>
-                </div>
-            </aside>
-            <div id="pelicula" class="pelicula hidden"></div>
-
-            <section id="banner" class="bg-colorido min-h-[500px] bg-center bg-cover bg-no-repeat justify-center pt-48">
-                <div class="container">
-                    <h1 class="text-white w-1/2">COMO A FORÇA DE VENDAS PODE SER O ELEMENTO TRANSFORMADOR?</h1>
-                    <h3 class="text-white w-1/2">Veja como aprender a engajar, inspirar e liderar equipes na era da inteligência artificial.</h3>
-                    <a href="/#form" class="scroll-smooth">
-                        <button class="btn btn-primario w-1/3">Participar</button>
+        <div class="container grid-cols-3">
+            <picture class="flex-row">
+                <img src="./assets/img/logo.png" class="w-24" alt="">
+            </picture>
+            <nav class="col-span-2">
+                <ul class="flex flex-row justify-end items-center h-full w-full gap-2 text-neutral-600">
+                    <a href="/#banner" class="scroll-smooth">
+                        <li class="menu-link-desk">Início</li>
                     </a>
+                    <a href="/#palestrantes" class="scroll-smooth">
+                        <li class="menu-link-desk">Palestrantes</li>
+                    </a>
+                    <a href="/#local" class="scroll-smooth">
+                        <li class="menu-link-desk">Data e Hora</li>
+                    </a>
+                    <a href="/#form" class="scroll-smooth">
+                        <li class="menu-link-desk">Inscreva-se</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <a href="/#banner" class="scroll-smooth">
+            <iconify-icon class="fixed bottom-0 right-0 z-30 text-3xl text-white m-8 bg-[#1B1464] p-2 rounded-full"
+                icon="tabler:arrow-up"></iconify-icon>
+        </a>
+
+        <aside id="p-lateral" class="painel-lateral translate-x-full">
+            <div>
+                <div class="mb-4">
+                    <p class="text-xs font-extrabold">Ingresso Seminário</p>
+                    <p class="text-3xl font-extrabold">Valor: R$ 790,00</p>
                 </div>
-            </section>
-            <section id="intro" class="overflow-hidden">
-                <div class="container grid-cols-2 relative">
-                    <div class="">
-                        <h2 class="titulo-sessao text-[#1B1464]">Você atua na indústria farmacêutica?</h2>
-                        <p class="mb-6">Então, prepare-se para descobrir como a força de vendas pode ser o agente de transformação que sua liderança precisa.</p>
-                        <p class="mb-6">Este é um encontro de transformação real para profissionais da indústria farmacêutica.</p>
-                        <p class="mb-6">Com líderes reconhecidos, que compartilham o que realmente impulsiona resultados: visão, estratégia, engajamento e ação.</p>
-                        <p class="mb-6">Você vai ouvir o que poucos contam — diretamente de quem faz acontecer. Um seminário para desbloquear seu potencial, alavancar sua carreira, elevar a performance do seu time e destravar novas oportunidades.</p>
-                        <p class="font-extrabold">Mais do que um evento: é um projeto pensado para transformar sua trajetória profissional.</p>
-                    </div>
-                    <div class="flex">
-                        <img src="./assets/img/vendedor-transp.png" alt="" class="-bottom-28 w-[90%] object-cover absolute">
-                    </div>
+                <div>
+                    <p>Escaneie o <strong>QR Code</strong> abaixo para pagar com Pix:</p>
+                    <img src="./assets/img/textura.png" class="p-4 my-4 border-2 w-1/2 border-black aspect-square" />
+                    <p>Ou se preferir, utilize a Chave Pix:<br><strong>CNPJ 00.000/0001-00</strong></p>
                 </div>
-            </section>
-            <section id="palestrantes" class="bg-colorido bg-center bg-cover bg-no-repeat">
-                <div class="container">
-                    <h2 class="titulo-sessao text-white text-sombra">QUEM VAI TE ENTREGAR AS FERRAMENTAS:</h2>
-                    <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ipsam sequi eligendi dolor nobis sed harum, facilis nesciunt omnis quibusdam animi asperiores, aspernatur quaerat quos id perferendis incidunt. Sapiente, vitae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ipsam sequi eligendi dolor nobis sed harum, facilis nesciunt omnis quibusdam animi asperiores, aspernatur quaerat quos id perferendis incidunt. Sapiente, vitae.</p>
-                    <div class="grid grid-cols-3 gap-8 mt-8">
-                        <div class="palestrante-container">
-                            <img class="palestrante-img" src="./assets/img/perfil.jpg" alt="">
-                            <h3 class="palestrante-nome">Wilson Borges</h3>
-                            <p class="palestrante-curriculo">Curriculo</p>
-                        </div>
-                        <div class="palestrante-container">
-                            <img class="palestrante-img" src="./assets/img/tara.jpg" alt="">
-                            <h3 class="palestrante-nome">Tara Helm</h3>
-                            <ul class="palestrante-curriculo px-6">
-                                <li>Tara Helm é uma executiva experiente nas áreas digital e de dados, com profunda expertise em transformar organizações do setor de ciências da vida por meio de estratégias tecnológicas inovadoras.</li>
-                            </ul>
-                        </div>
-                        <div class="palestrante-container">
-                            <img class="palestrante-img" src="./assets/img/kalil.jpeg" alt="">
-                            <h3 class="palestrante-nome">Prof. Dr. Kalil Duailibi</h3>
-                            <ul class="palestrante-curriculo px-6">
-                                <li>Professor e Coordenador de Psiquiatria da Universidade de Santo Amaro;</li>
-                                <li>Professor Titular de Psicopatologia do Instituto de Psiquiatria e Psicanálise da Infância e Adolescência de São Paulo;</li>
-                                <li>Presidente do Departamento Científico de Psiquiatria da Associação Paulista de Medicina.</li>
-                            </ul>
-                        </div>
-                        <div class="palestrante-container">
-                            <img class="palestrante-img" src="./assets/img/perfil.jpg" alt="">
-                            <h3 class="palestrante-nome">Liana Caron</h3>
-                            <p class="palestrante-curriculo">Curriculo</p>
-                        </div>
-                        <div class="palestrante-container">
-                            <img class="palestrante-img" src="./assets/img/perfil.jpg" alt="">
-                            <h3 class="palestrante-nome">Neuler Peçanha</h3>
-                            <p class="palestrante-curriculo">Curriculo</p>
-                        </div>
-                        <div class="palestrante-container">
-                            <img class="palestrante-img" src="./assets/img/marcos.jpg" alt="">
-                            <h3 class="palestrante-nome">Marcos Nour</h3>
-                            <p class="palestrante-curriculo">Curriculo</p>
-                        </div>
-                    </div>
+                <ul class="mt-6 ml-6">
+                    <li class="pix-list"><strong>Abra o aplicativo do seu banco</strong> ou carteira digital.</li>
+                    <li class="pix-list">Escolha a opção <strong>Pix > Pagar com QR Code.</strong></li>
+                    <li class="pix-list"><strong>Aponte a câmera</strong> para o QR Code acima <strong>OU</strong> cole
+                        a chave Pix no campo indicado.</li>
+                    <li class="pix-list">Confira os <strong>dados de pagamento</strong> (nome do recebedor, valor e
+                        descrição).</li>
+                    <li class="pix-list">Finalize a transação normalmente.</li>
+                    <li class="pix-list"><strong>Envie o comprovante de pagamento</strong> para o WhatsApp: 11
+                        99723-2585 informando seu nome completo.</li>
+                </ul>
+            </div>
+        </aside>
+        <div id="pelicula" class="pelicula hidden"></div>
+
+        <section id="banner" class="bg-colorido min-h-[500px] bg-center bg-cover bg-no-repeat justify-center pt-48">
+            <div class="container">
+                <h1 class="text-white w-1/2">COMO A FORÇA DE VENDAS PODE SER O ELEMENTO TRANSFORMADOR?</h1>
+                <h3 class="text-white w-1/2">Veja como aprender a engajar, inspirar e liderar equipes na era da
+                    inteligência artificial.</h3>
+                <a href="/#form" class="scroll-smooth">
+                    <button class="btn btn-primario w-1/3">Participar</button>
+                </a>
+            </div>
+        </section>
+        <section id="intro" class="overflow-hidden">
+            <div class="container grid-cols-2 relative">
+                <div class="">
+                    <h2 class="titulo-sessao text-[#1B1464]">Você atua na indústria farmacêutica?</h2>
+                    <p class="mb-6">Então, prepare-se para descobrir como a força de vendas pode ser o agente de
+                        transformação que sua liderança precisa.</p>
+                    <p class="mb-6">Este é um encontro de transformação real para profissionais da indústria
+                        farmacêutica.</p>
+                    <p class="mb-6">Com líderes reconhecidos, que compartilham o que realmente impulsiona resultados:
+                        visão, estratégia, engajamento e ação.</p>
+                    <p class="mb-6">Você vai ouvir o que poucos contam — diretamente de quem faz acontecer. Um seminário
+                        para desbloquear seu potencial, alavancar sua carreira, elevar a performance do seu time e
+                        destravar novas oportunidades.</p>
+                    <p class="font-extrabold">Mais do que um evento: é um projeto pensado para transformar sua
+                        trajetória profissional.</p>
                 </div>
-            </section>
-            <section id="local">
-                <div class="container grid-cols-2">
-                    <div>
-                        <h2 class="titulo-sessao text-[#1B1464]">Localização</h2>
-                        <ul>
-                            <li class="loc-list">
-                                <iconify-icon class="loc-list-icone" icon="tabler:map-pin"></iconify-icon>
-                                <div>
-                                    <p>Sheraton São Paulo – Sala Matisse</p>
-                                    <p class="text-xs">Av. das Nações Unidas, 12559 - Brooklin Novo, São Paulo - SP, 04578-903</p>
-                                </div>
-                            </li>
-                            <li class="loc-list">
-                                <iconify-icon class="loc-list-icone" icon="tabler:calendar-week"></iconify-icon>
-                                <p>Terça-feira, 16 de setembro</p>
-                            </li>
-                            <li class="loc-list">
-                                <iconify-icon class="loc-list-icone" icon="tabler:clock-hour-2"></iconify-icon>
-                                <p>8h30 às 12h30</p>
-                            </li>
-                            <li class="loc-list">
-                                <iconify-icon class="loc-list-icone" icon="tabler:alert-hexagon"></iconify-icon>
-                                <p>Vagas limitadas: garanta já a sua.</p>
+                <div class="flex">
+                    <img src="./assets/img/vendedor-transp.png" alt="" class="-bottom-28 w-[90%] object-cover absolute">
+                </div>
+            </div>
+        </section>
+        <section id="palestrantes" class="bg-colorido bg-center bg-cover bg-no-repeat">
+            <div class="container">
+                <h2 class="titulo-sessao text-white text-sombra">QUEM VAI TE ENTREGAR AS FERRAMENTAS:</h2>
+                <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ipsam sequi
+                    eligendi dolor nobis sed harum, facilis nesciunt omnis quibusdam animi asperiores, aspernatur
+                    quaerat quos id perferendis incidunt. Sapiente, vitae. Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit. Error ipsam sequi eligendi dolor nobis sed harum, facilis nesciunt omnis quibusdam
+                    animi asperiores, aspernatur quaerat quos id perferendis incidunt. Sapiente, vitae.</p>
+                <div class="grid grid-cols-3 gap-8 mt-8">
+                    <div class="palestrante-container">
+                        <img class="palestrante-img" src="./assets/img/perfil.jpg" alt="">
+                        <h3 class="palestrante-nome">Wilson Borges</h3>
+                        <p class="palestrante-curriculo">Curriculo</p>
+                    </div>
+                    <div class="palestrante-container">
+                        <img class="palestrante-img" src="./assets/img/tara.jpg" alt="">
+                        <h3 class="palestrante-nome">Tara Helm</h3>
+                        <ul class="palestrante-curriculo px-6">
+                            <li>Tara Helm é uma executiva experiente nas áreas digital e de dados, com profunda
+                                expertise em transformar organizações do setor de ciências da vida por meio de
+                                estratégias tecnológicas inovadoras.</li>
+                        </ul>
+                    </div>
+                    <div class="palestrante-container">
+                        <img class="palestrante-img" src="./assets/img/kalil.jpeg" alt="">
+                        <h3 class="palestrante-nome">Prof. Dr. Kalil Duailibi</h3>
+                        <ul class="palestrante-curriculo px-6">
+                            <li>Professor e Coordenador de Psiquiatria da Universidade de Santo Amaro;</li>
+                            <li>Professor Titular de Psicopatologia do Instituto de Psiquiatria e Psicanálise da
+                                Infância e Adolescência de São Paulo;</li>
+                            <li>Presidente do Departamento Científico de Psiquiatria da Associação Paulista de Medicina.
                             </li>
                         </ul>
                     </div>
-                    <img id="map" src="./assets/img/mapa.jpg" alt="Mapa do local do evento" class="rounded-lg h-full object-cover">
-                </div>
-            </section>
-            <section id="form" class="bg-[#1B1464] relative">
-                <div class="container grid-cols-2 gap-8">
-                    <div>
-                        <h2 class="titulo-sessao text-white">Inscreva-se Agora</h2>
-                        <form action="" class="flex flex-col gap-4">
-                            <input type="text" placeholder="Nome Completo*" id="nome" required>
-                            <input type="email" placeholder="E-mail*" id="email" required>
-                            <input type="text" placeholder="WhatsApp*" id="tel" required>
-                            <input type="text" placeholder="Empresa*" id="emp" required>
-                            <input type="text" placeholder="Cargo*" id="cargo" required>
-                            <p class="text-xs text-white">* Campo obrigatórios</p>
-                            <button id="btn-form-inscrever" class="btn btn-primario w-full btn-sombra-2">Inscrever</button>
-                        </form>
-                        <ul class="mt-6 ml-6">
-                            <li class="form-list">Preencha todos os campos do formulário com atenção.</li>
-                            <li class="form-list">Após o envio do formulário, você verá na tela um QR Code e uma chave Pix.</li>
-                            <li class="form-list"><strong>Importante:</strong> Após efetuar o pagamento, envie o comprovante via WhatsApp para o número (XX) XXXXX-XXXX.</li>
-                            <li class="form-list"><strong>Confirmação:</strong> Após o envio do comprovante, nossa equipe irá validar e confirmar sua inscrição em até 24h.</li>
-                        </ul>
+                    <div class="palestrante-container">
+                        <img class="palestrante-img" src="./assets/img/perfil.jpg" alt="">
+                        <h3 class="palestrante-nome">Liana Caron</h3>
+                        <p class="palestrante-curriculo">Curriculo</p>
                     </div>
-                    <div class="flex justify-end">
-                        <ul class="w-3/4 my-auto">
-                            <li class="valores-list">
-                                <div>
-                                    <h3>Lote 001</h3>
-                                    <iconify-icon class="text-white text-2xl mr-2" icon="ion:ticket-outline"></iconify-icon>
-                                </div>
-                                <strong>Ingresso: R$ 790,00</strong>
-                                <p>31/07/2025 - 16/08/2025</p>
-                            </li>
-                            <li class="valores-list opacity-20">
-                                <div>
-                                    <h3>Lote 002</h3>
-                                    <iconify-icon class="text-white text-2xl mr-2" icon="ion:ticket-outline"></iconify-icon>
-                                </div>
-                                <strong>Ingresso: R$ 890,00</strong>
-                                <p>31/07/2025 - 16/08/2025</p>
-                            </li>
-                            <li class="valores-list opacity-20">
-                                <div>
-                                    <h3>Lote 003</h3>
-                                    <iconify-icon class="text-white text-2xl mr-2" icon="ion:ticket-outline"></iconify-icon>
-                                </div>
-                                <strong>Ingresso: R$ 990,00</strong>
-                                <p>31/07/2025 - 16/08/2025</p>
-                            </li>
-                        </ul>
+                    <div class="palestrante-container">
+                        <img class="palestrante-img" src="./assets/img/perfil.jpg" alt="">
+                        <h3 class="palestrante-nome">Neuler Peçanha</h3>
+                        <p class="palestrante-curriculo">Curriculo</p>
+                    </div>
+                    <div class="palestrante-container">
+                        <img class="palestrante-img" src="./assets/img/marcos.jpg" alt="">
+                        <h3 class="palestrante-nome">Marcos Nour</h3>
+                        <p class="palestrante-curriculo">Curriculo</p>
                     </div>
                 </div>
-            </section>
-            <footer class="bg-[#1B1464]">
-                <section>
-                    <div class="container">
-                        <div class="flex justify-between items-center">
-                            <div class="rodape-info">
-                                <p class="text-white text-xs">Seminário FarmaPower</p>
-                            </div><div class="rodape-info">
-                                <p class="text-white text-xs">GTX100 Incentivos</p>
-                            </div>
-                            <div class="rodape-info">
-                                <iconify-icon class="text-white text-2xl cursor-pointer mr-2" icon="tabler:brand-whatsapp"></iconify-icon>
-                                <p class="text-white text-xs">+55 11 99723-2585</p>
-                            </div>
-                            <div class="rodape-info">
-                                <iconify-icon class="text-white text-2xl cursor-pointer mr-2" icon="tabler:mail"></iconify-icon>
-                                <p class="text-white text-xs">seminario.farmapower@gtx100.com.br</p>
-                            </div>
+            </div>
+        </section>
+        <section id="local">
+            <div class="container grid-cols-2">
+                <div>
+                    <h2 class="titulo-sessao text-[#1B1464]">Localização</h2>
+                    <ul>
+                        <li class="loc-list">
+                            <iconify-icon class="loc-list-icone" icon="tabler:map-pin"></iconify-icon>
                             <div>
-                                <iconify-icon class="text-white text-2xl cursor-pointer" icon="tabler:world"></iconify-icon>
-                                <iconify-icon class="text-white text-2xl cursor-pointer" icon="tabler:brand-linkedin"></iconify-icon>
+                                <p>Sheraton São Paulo – Sala Matisse</p>
+                                <p class="text-xs">Av. das Nações Unidas, 12559 - Brooklin Novo, São Paulo - SP,
+                                    04578-903</p>
                             </div>
+                        </li>
+                        <li class="loc-list">
+                            <iconify-icon class="loc-list-icone" icon="tabler:calendar-week"></iconify-icon>
+                            <p>Terça-feira, 16 de setembro</p>
+                        </li>
+                        <li class="loc-list">
+                            <iconify-icon class="loc-list-icone" icon="tabler:clock-hour-2"></iconify-icon>
+                            <p>8h30 às 12h30</p>
+                        </li>
+                        <li class="loc-list">
+                            <iconify-icon class="loc-list-icone" icon="tabler:alert-hexagon"></iconify-icon>
+                            <p>Vagas limitadas: garanta já a sua.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex justify-end">
+                    <div id="map" style="height: 400px; width: 480px;"></div>
+                </div>
+            </div>
+        </section>
+        <section id="form" class="bg-[#1B1464] relative">
+            <div class="container grid-cols-2 gap-8">
+                <div>
+                    <h2 class="titulo-sessao text-white">Inscreva-se Agora</h2>
+                    <form action="" class="flex flex-col gap-4">
+                        <input type="text" placeholder="Nome Completo*" id="nome" required>
+                        <input type="email" placeholder="E-mail*" id="email" required>
+                        <input type="text" placeholder="WhatsApp*" id="tel" required>
+                        <input type="text" placeholder="Empresa*" id="emp" required>
+                        <input type="text" placeholder="Cargo*" id="cargo" required>
+                        <p class="text-xs text-white">* Campo obrigatórios</p>
+                        <button id="btn-form-inscrever" class="btn btn-primario w-full btn-sombra-2">Inscrever</button>
+                    </form>
+                    <ul class="mt-6 ml-6">
+                        <li class="form-list">Preencha todos os campos do formulário com atenção.</li>
+                        <li class="form-list">Após o envio do formulário, você verá na tela um QR Code e uma chave Pix.
+                        </li>
+                        <li class="form-list"><strong>Importante:</strong> Após efetuar o pagamento, envie o comprovante
+                            via WhatsApp para o número (XX) XXXXX-XXXX.</li>
+                        <li class="form-list"><strong>Confirmação:</strong> Após o envio do comprovante, nossa equipe
+                            irá validar e confirmar sua inscrição em até 24h.</li>
+                    </ul>
+                </div>
+                <div class="flex justify-end">
+                    <ul class="w-3/4 my-auto">
+                        <li class="valores-list">
+                            <div>
+                                <h3>Lote 001</h3>
+                                <iconify-icon class="text-white text-2xl mr-2" icon="ion:ticket-outline"></iconify-icon>
+                            </div>
+                            <strong>Ingresso: R$ 790,00</strong>
+                            <p>31/07/2025 - 16/08/2025</p>
+                        </li>
+                        <li class="valores-list opacity-20">
+                            <div>
+                                <h3>Lote 002</h3>
+                                <iconify-icon class="text-white text-2xl mr-2" icon="ion:ticket-outline"></iconify-icon>
+                            </div>
+                            <strong>Ingresso: R$ 890,00</strong>
+                            <p>31/07/2025 - 16/08/2025</p>
+                        </li>
+                        <li class="valores-list opacity-20">
+                            <div>
+                                <h3>Lote 003</h3>
+                                <iconify-icon class="text-white text-2xl mr-2" icon="ion:ticket-outline"></iconify-icon>
+                            </div>
+                            <strong>Ingresso: R$ 990,00</strong>
+                            <p>31/07/2025 - 16/08/2025</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer class="bg-[#1B1464]">
+            <section>
+                <div class="container">
+                    <div class="flex justify-between items-center">
+                        <div class="rodape-info">
+                            <p class="text-white text-xs">1º Seminário FarmaPower</p>
+                        </div>
+                        <div class="rodape-info">
+                            <p class="text-white text-xs">GTX100 Incentivos</p>
+                        </div>
+                        <div class="rodape-info">
+                            <iconify-icon class="text-white text-2xl cursor-pointer mr-2"
+                                icon="tabler:brand-whatsapp"></iconify-icon>
+                            <p class="text-white text-xs">+55 11 99723-2585</p>
+                        </div>
+                        <div class="rodape-info">
+                            <iconify-icon class="text-white text-2xl cursor-pointer mr-2"
+                                icon="tabler:mail"></iconify-icon>
+                            <p class="text-white text-xs">seminario.farmapower@gtx100.com.br</p>
+                        </div>
+                        <div>
+                            <a href="https://gtx100.com.br/" target="_blank">
+                                <iconify-icon class="text-white text-2xl cursor-pointer"
+                                    icon="tabler:world"></iconify-icon>
+                            </a>
+                            <a href="https://www.linkedin.com/company/gtx100/" target="_blank">
+                                <iconify-icon class="text-white text-2xl cursor-pointer"
+                                    icon="tabler:brand-linkedin"></iconify-icon>
+                            </a>
                         </div>
                     </div>
-                </section>
-            </footer>
-        </main>
-        <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
-        <script src="./index.ts" type="text/javascript" charset="utf-8"></script>
-    </body>
+                </div>
+            </section>
+        </footer>
+    </main>
+    <script>
+        // L.control.locate().addTo(map); // desative para evitar override
+        const map = L.map('map').setView([-23.609432, -46.697334], 15)
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map)
+        L.marker([-23.609432, -46.697334]).addTo(map).openPopup()
+    </script>
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <script src="./index.ts" type="text/javascript" charset="utf-8"></script>
+</body>
+
 </html>
