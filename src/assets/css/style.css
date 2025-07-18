@@ -108,11 +108,15 @@
     }
 
     .palestrante-container {
-        @apply flex flex-col text-center items-center justify-between p-8 bg-gradient-to-b from-[#1B146400] from-40% to-[#1B1464] to-40% w-full border-[2px] border-white
+        @apply flex flex-col text-center items-center justify-start p-8 bg-gradient-to-b from-[#1B146400] from-40% to-[#1B1464] to-40% w-full border-[2px] border-white
     }
 
     .palestrante-img {
         @apply rounded-full aspect-square w-56 h-56 border-[8px] border-white object-cover object-center
+    }
+
+    .palestrante-info {
+        @apply flex flex-col justify-start
     }
 
     .palestrante-nome {
@@ -120,11 +124,11 @@
     }
 
     .palestrante-curriculo li {
-        @apply text-white text-[10px] leading-4 font-light
+        @apply text-white text-[10px] leading-4 font-light mt-2
     }
 
     .loc-list {
-        @apply flex flex-row py-3 items-center
+        @apply flex flex-row py-4 items-center
     }
 
     .loc-list-icone {
@@ -163,23 +167,23 @@
         @apply bg-red-500
     }
 
-    .valores-list {
-        @apply text-white text-sm mb-8 p-8 border-[2px] border-dashed border-white flex flex-col justify-center
+    .ticket-list {
+        @apply text-white text-sm mb-4 p-8 border-2 border-dashed border-white flex flex-col justify-center
     }
 
-    .valores-list div {
+    .ticket-list div {
         @apply flex items-center justify-between pb-4 border-b-[1px] border-white
     }
 
-    .valores-list h3 {
+    .ticket-list h3 {
         @apply text-white
     }
 
-    .valores-list p {
+    .ticket-list p {
         @apply text-[10px] mb-2 text-white
     }
 
-    .valores-list strong {
+    .ticket-list strong {
         @apply text-2xl
     }
 }
@@ -199,5 +203,10 @@
 
     .menu-sombra {
         box-shadow: .5rem 0rem 2rem rgba(20, 20, 20, .2);
+    }
+
+    #map {
+        height: 500px;
+        width: 480px;
     }
 }             
