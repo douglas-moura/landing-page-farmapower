@@ -35,7 +35,7 @@
 
     h1 {
         @apply font-extrabold leading-tight mb-4
-        text-3xl xl:text-5xl
+        text-2xl xl:text-3xl
     }
 
     h2 {
@@ -85,7 +85,7 @@
         @apply menu-sombra bg-white fixed h-dvh top-0 p-6 w-2/3 flex flex-col justify-start transition-all duration-200 ease-in-out
     }
 
-    .menu-link {
+    .menu-link-mobi {
         @apply py-2 px-4 my-[2px] w-auto rounded cursor-pointer text-neutral-600 hover:bg-neutral-100
     }
 
@@ -109,24 +109,37 @@
         @apply relative flex flex-col
     }
 
+    .banner-list {
+        @apply text-white font-extrabold leading-tight text-sombra-simples
+        text-2xl xl:text-4xl
+    }
+
     .palestrante-container {
-        @apply flex flex-col text-center items-center justify-start p-8 bg-gradient-to-b from-[#1B146400] from-40% to-[#1B1464] to-40% w-full border-[2px] border-white
+        @apply flex flex-col gap-4 justify-start bg-[#000000be] w-full
+    }
+
+    .palestrante-head {
+        @apply flex flex-row items-center gap-4 mb-4 w-2/3
     }
 
     .palestrante-img {
-        @apply rounded-full aspect-square w-56 h-56 border-[8px] border-white object-cover object-center
+        @apply rounded-full aspect-square w-32 h-32 border-[8px] border-white object-cover object-center
+    }
+
+    .palestrante-tema {
+        @apply text-white text-lg font-bold
     }
 
     .palestrante-info {
-        @apply flex flex-col justify-start
+        @apply flex flex-col justify-start w-2/3
     }
 
     .palestrante-nome {
-        @apply font-extrabold mt-4 text-white
+        @apply font-extrabold text-white
     }
 
     .palestrante-curriculo li {
-        @apply text-white text-[10px] leading-4 font-light mt-2
+        @apply text-white text-[12px] leading-6 font-light mt-2
     }
 
     .loc-list {
@@ -138,7 +151,7 @@
     }
 
     .form-list {
-        @apply text-white text-xs mb-4 list-decimal
+        @apply text-white text-base mb-6 list-decimal
     }
 
     .rodape-info {
@@ -205,7 +218,19 @@
         text-shadow: .3rem .3rem 0 #1B1464;
     }
 
+    .text-sombra-simples {
+        text-shadow: .3rem .3rem 1rem #1B1464;
+    }
+
     .menu-sombra {
         box-shadow: .5rem 0rem 2rem rgba(20, 20, 20, .2);
+    }
+
+    .trapezio-1 {
+        clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 0% 100%);
+    }
+
+    .trapezio-2 {
+        clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 }             
