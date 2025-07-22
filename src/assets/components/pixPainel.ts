@@ -1,4 +1,4 @@
-import qrcode from '../img/textura.png'
+import qrcode from '../img/qrcode-pix_780.png'
 
 export const pixPainel = (): void => {
     
@@ -19,7 +19,7 @@ export const pixPainel = (): void => {
             <div>
                 <p>Escaneie o <strong>QR Code</strong> abaixo para pagar com Pix:</p>
                 <img src="${qrcode}" class="p-4 my-4 border-2 w-1/2 border-black aspect-square" />
-                <p>Ou se preferir, utilize a Chave Pix:<br><strong>CNPJ 00.000/0001-00</strong></p>
+                <p>Ou se preferir, utilize a Chave Pix:<br><strong>CNPJ 42.532.164/0001-00</strong></p>
             </div>
             <ul class="mt-6 ml-6">
                 <li class="pix-list"><strong>Abra o aplicativo do seu banco</strong> ou carteira digital.</li>

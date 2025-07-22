@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
-    mode: 'development', // ou 'production'
+    mode: 'production', // 'development' ou 'production'
     entry: './src/index.ts',
     output: {
         filename: 'index.js',

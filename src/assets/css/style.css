@@ -35,7 +35,7 @@
 
     h1 {
         @apply font-extrabold leading-tight mb-4
-        text-2xl xl:text-3xl
+        text-2xl xl:text-4xl
     }
 
     h2 {
@@ -111,7 +111,7 @@
 
     .banner-list {
         @apply text-white font-extrabold leading-tight text-sombra-simples
-        text-2xl xl:text-4xl
+        text-xl xl:text-2xl
     }
 
     .palestrante-container {

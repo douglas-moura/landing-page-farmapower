@@ -36,5 +36,3 @@ btnFormInscrever.addEventListener('click', (event: MouseEvent): void => {
         }
     }
 })
-
-console.log('Script carregado com sucesso!')
