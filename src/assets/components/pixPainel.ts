@@ -14,7 +14,7 @@ export const pixPainel = (): void => {
         <div>
             <div class="mb-4">
                 <p class="text-xs font-extrabold">Ingresso Seminário</p>
-                <p class="text-xl lg:text-3xl font-extrabold">Valor: R$ 790,00</p>
+                <p class="text-xl lg:text-3xl font-extrabold">Valor: R$ 780,00</p>
             </div>
             <div>
                 <p>Escaneie o <strong>QR Code</strong> abaixo para pagar com Pix:</p>
