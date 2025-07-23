@@ -14,7 +14,8 @@ Divulgar e promover a inscrição em um seminário institucional da FarmaPower, 
 
 - **HTML5** – Estrutura semântica do conteúdo
 - **CSS3 / Tailwind CSS** – Estilização responsiva e moderna
-- **JavaScript (Vanilla)** – Funcionalidades interativas básicas
+- **TypeScript** – Lógica do projeto com tipagem estática
+- **JavaScript (compilado)** – Geração final do código para o navegador
 - **Webpack** – Empacotamento e otimização de assets (se aplicável)
 
 ---
