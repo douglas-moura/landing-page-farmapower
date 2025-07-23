@@ -10,8 +10,9 @@
 </head>
 
 <body>
-    <header>
-        <nav id="menu" class="menu-lateral -translate-x-full -left-8">
+    <header>]
+        <!-- Menu Mobile -->
+        <nav id="menu" class="menu-lateral -translate-x-full -left-8 z-50">
             <figure id="icone-fechar-menu" class="w-full flex flex-row justify-end">
                 <iconify-icon icon="tabler:x" class="text-3xl my-auto text-neutral-600 cursor-pointer"></iconify-icon>
             </figure>
@@ -30,7 +31,7 @@
                 </a>
             </ul>
         </nav>
-
+        <!-- Menu Desktop -->
         <div class="container grid-cols-2 md:grid-cols-3 items-center">
             <figure id="icone-abrir-menu" class="md:hidden">
                     <iconify-icon icon="tabler:menu-2" class="text-5xl text-white my-auto text-neutral-600 cursor-pointer"></iconify-icon>
@@ -58,36 +59,38 @@
     </header>
     <main>
         <a href="/#banner" class="scroll-smooth">
-            <iconify-icon class="fixed bottom-0 right-0 z-30 text-3xl text-white m-8 bg-[#1B1464] p-2 rounded-full" icon="tabler:arrow-up"></iconify-icon>
+            <iconify-icon class="fixed bottom-0 right-0 z-40 text-3xl text-[#1B1464] m-8 bg-white p-2 rounded-full" icon="tabler:arrow-up"></iconify-icon>
         </a>
         <section id="banner" class="bg-colorido min-h-[500px] bg-top bg-cover bg-no-repeat justify-center pt-48">
-            <div class="container lg:grid-cols-3">
-                <div class="lg:col-span-2">
-                    <h1 class="text-white uppercase text-sombra-simples">1º Seminário Farma Power  - “COMO TRANSFORMAR A FORÇA DE VENDAS NO MOTOR DE CRESCIMENTO DE LUCROS E MARKET SHARE, ANO APÓS ANO”.</h1>
+            <div class="container">
+                <div class="">
+                    <h1 class="text-white uppercase text-sombra-simples font-bold">1º Seminário Farma Power  - “COMO TRANSFORMAR A FORÇA DE VENDAS NO MOTOR DE CRESCIMENTO DE LUCROS E MARKET SHARE, ANO APÓS ANO”.</h1>
                     <ul class="mt-8">
                         <li class="banner-list">Terça</li>
                         <li class="banner-list">16 de Setembro</li>
                         <li class="banner-list">Hotel Sheraton São Paulo – Sala Matisse</li>
                     </ul>
                     <a href="/#form" class="scroll-smooth">
-                        <button class="btn btn-primario mt-8 w-1/2 xl:w-1/3">QUERO PARTICIPAR</button>
+                        <button class="btn btn-primario mt-8 w-full xl:w-1/3">QUERO PARTICIPAR</button>
                     </a>
                 </div>
             </div>
         </section>
-        <section id="intro" class="overflow-hidden">
+        <section id="intro" class="overflow-hidden bg-white bg-equipe bg-[position:0%_30%] bg-[length:110%_auto] bg-left bg-no-repeat">
             <div class="container relative lg:grid-cols-3 xl:grid-cols-2">
-                <div class="lg:col-span-2 xl:col-span-1">
+                <div class="p-12 bg-[#ffffffe2] rounded-xl lg:col-span-2 xl:col-span-1">
                     <h3 class="titulo-sessao text-[#1B1464] font-extrabold">Como a ciência e metodologia, e não os “achismos”, ensinam como engajar, inspirar e liderar equipes na era da inteligência artificial e da mudança</h3>
-                    <p class="mb-6">Prepare-se para um seminário de transformação real tanto para profissionais da indústria farmacêutica, como para entusiastas de uma liderança diferenciada que procura na ciência formas de motivar, engajar e obter os melhores resultados proporcionados por suas forças de vendas.</p>
-                    <p class="mb-6">Para empoderar você ainda mais, reunimos líderes e especialistas reconhecidos, que vão compartilhar o que de fato impulsiona grandes resultados.</p>
-                    <p class="mb-6">Você vai ouvir o que poucos revelam — diretamente de quem faz acontecer.</p>
-                    <p class="mb-6">Um encontro de líder para líder, pensado para desbloquear potenciais, alavancando, de verdade, a performance do seu time. </p>
-                    <p class="font-extrabold">Mais do que um evento: um projeto criado para transformar a trajetória da sua empresa – e a sua.</p>
+                    <p class="mb-4 text-sm">Prepare-se para um seminário de transformação real tanto para profissionais da indústria farmacêutica, como para entusiastas de uma liderança diferenciada que procura na ciência formas de motivar, engajar e obter os melhores resultados proporcionados por suas forças de vendas.</p>
+                    <p class="mb-4 text-sm">Para empoderar você ainda mais, reunimos líderes e especialistas reconhecidos, que vão compartilhar o que de fato impulsiona grandes resultados.</p>
+                    <p class="mb-4 text-sm">Você vai ouvir o que poucos revelam — diretamente de quem faz acontecer.</p>
+                    <p class="mb-4 text-sm">Um encontro de líder para líder, pensado para desbloquear potenciais, alavancando, de verdade, a performance do seu time. </p>
+                    <p class="font-extrabold text-sm">Mais do que um evento: um projeto criado para transformar a trajetória da sua empresa – e a sua.</p>
                 </div>
+                <!--
                 <div class="flex">
                     <img src="./assets/img/vendedor-transp.png" alt="" class="-bottom-28 w-[90%] object-cover absolute hidden lg:block lg:-translate-x-[80px] xl:translate-x-0">
                 </div>
+                -->
             </div>
         </section>
         <section id="palestrantes" class="bg-[#1B1464] bg-center bg-cover bg-no-repeat">
@@ -96,23 +99,69 @@
                 <p class="text-white">Conheça os especialistas que vão conduzir você nesta jornada de transformação. Cada um dos nossos convidados traz uma bagagem sólida de conhecimento e experiência prática em suas respectivas áreas. São profissionais reconhecidos nacional e internacionalmente, preparados para oferecer conteúdo de alto nível, com aplicabilidade direta no seu dia a dia profissional.</p>
                 <div class="grid gap-6 mt-8">
                     <div class="palestrante-container">
-                        <img class="" src="./assets/img/Slide1.jpg" alt="Wilson Borges">
+                        <img class="" src="./assets/img/Slide1.jpg" class="w-full" alt="Wilson Borges">
                     </div>
                     <div class="palestrante-container">
-                        <img class="" src="./assets/img/Slide2.jpg" alt="Prof. Dr. Kalil Duailibi">
+                        <img class="" src="./assets/img/Slide2.jpg" class="w-full" alt="Prof. Dr. Kalil Duailibi">
                     </div>
                     <div class="palestrante-container">
-                        <img class="" src="./assets/img/Slide3.jpg" alt="Tara Helm">
+                        <img class="" src="./assets/img/Slide3.jpg" class="w-full" alt="Tara Helm">
                     </div>
                     <div class="palestrante-container">
-                        <img class="" src="./assets/img/Slide4.jpg" alt="Marcos Nour">
+                        <img class="" src="./assets/img/Slide5.jpg" class="w-full" alt="Liana Caron">
                     </div>
                     <div class="palestrante-container">
-                        <img class="" src="./assets/img/Slide5.jpg" alt="Liana Caron">
+                        <img class="" src="./assets/img/Slide4.jpg" class="w-full" alt="Marcos Nour">
                     </div>
                     <div class="palestrante-container">
-                        <img class="" src="./assets/img/Slide6.jpg" alt="Neuler Peçanha">
+                        <img class="" src="./assets/img/Slide6.jpg" class="w-full" alt="Neuler Peçanha">
                     </div>
+                    <div id="form" class="mt-8 xl:mt-16">
+                        <h2 class="titulo-sessao text-white">Participe do maior evento sobre engajamento e produtividade da força de vendas da indústria farmacêutica.</h2>
+                        <p class="text-white mb-4">Garanta sua vaga com valor especial por tempo limitado e invista em conhecimento.</p>
+                    </div>
+                    <div class="grid xl:grid-cols-3">
+                        <div class="mx-[2px] pt-4 border-t border-white">
+                            <div class="bg-gradient-to-b from-[#7DC241] to-[#379D1F] py-12 relative overflow-hidden">
+                                <p class="text-white text-center text-sm mb-2">Até 31 de julho 2025</p>
+                                <p class="text-white text-center text-5xl font-extralight">R$ 780,00</p>
+                                <div class="bg-white w-1/3 h-6 absolute -bottom-2 left-0 trapezio-1"></div>
+                                <div class="bg-white w-1/3 h-6 absolute -bottom-2 right-0 trapezio-2"></div>
+                            </div>
+                            <div class="bg-white p-8">
+                                <p class="py-4 text-xs border-t-2 border-neutral-200 text-center">Para 1 pessoa da empresa</p>
+                                <p class="py-4 text-xs border-t-2 border-b border-neutral-200 text-center">Pagamento apenas via Pix</p>
+                            </div>
+                            <div class="rounded-bl-2xl rounded-br-2xl bg-[#7DC241] p-4"></div>
+                        </div>
+                        <div class="mx-[2px] pt-4 border-t border-white">
+                            <div class="bg-gradient-to-b from-[#FBAC17] to-[#E87D17] py-12 relative overflow-hidden">
+                                <p class="text-white text-center text-sm mb-2">Até 31 de agosto 2025</p>
+                                <p class="text-white text-center text-5xl font-extralight">R$ 880,00</p>
+                                <div class="bg-white w-1/3 h-6 absolute -bottom-2 left-0 trapezio-1"></div>
+                                <div class="bg-white w-1/3 h-6 absolute -bottom-2 right-0 trapezio-2"></div>
+                            </div>
+                            <div class="bg-white p-8">
+                                <p class="py-4 text-xs border-t-2 border-neutral-200 text-center">Para 1 pessoa da empresa</p>
+                                <p class="py-4 text-xs border-t-2 border-b border-neutral-200 text-center">Pagamento apenas via Pix</p>
+                            </div>
+                            <div class="rounded-bl-2xl rounded-br-2xl bg-[#FBAC17] p-4"></div>
+                        </div>
+                        <div class="mx-[2px] pt-4 border-t border-white">
+                            <div class="bg-gradient-to-b from-red-600 to-red-700 py-12 relative overflow-hidden">
+                                <p class="text-white text-center text-sm mb-2">Até 15 de setembro 2025</p>
+                                <p class="text-white text-center text-5xl font-extralight">R$ 980,00</p>
+                                <div class="bg-white w-1/3 h-6 absolute -bottom-2 left-0 trapezio-1"></div>
+                                <div class="bg-white w-1/3 h-6 absolute -bottom-2 right-0 trapezio-2"></div>
+                            </div>
+                            <div class="bg-white p-8">
+                                <p class="py-4 text-xs border-t-2 border-neutral-200 text-center">Para 1 pessoa da empresa</p>
+                                <p class="py-4 text-xs border-t-2 border-b border-neutral-200 text-center">Pagamento apenas via Pix</p>
+                            </div>
+                            <div class="rounded-bl-2xl rounded-br-2xl bg-red-600 p-4"></div>
+                        </div>
+                    </div>
+                    <a href="https://www.sympla.com.br/evento/seminario--como-a-forca-de-vendas-pode-ser-o-elemento-transformador---produzido-por-farma-power/3014746" target="_blank" id="_btn-form-inscrever" class="btn btn-primario btn-sombra-2 text-center text-2xl mx-auto w-full xl:w-2/3">Inscrever Agora</a>
                     <!--
                     <div class="palestrante-container bg-wilson bg-center bg-cover bg-no-repeat">
                         <div class="palestrante-head">
@@ -204,10 +253,11 @@
                     </ul>
                 </div>
                 <div class="flex justify-end">
-                    <div id="map" class="rounded-xl z-30" style="height: 500px; width: 100%;"></div>
+                    <div id="map" class="rounded-xl" style="height: 500px; width: 100%;"></div>
                 </div>
             </div>
         </section>
+        <!--
         <section id="form" class="bg-[#1B1464] relative">
             <div class="container gap-8">
                 <div>
@@ -232,34 +282,6 @@
                     </ul>
                 </div>
                 <div class="flex justify-end mt-8 xl:mt-0">
-                    <!--
-                    <ul class="my-auto w-full xl:w-3/4">
-                        <li class="ticket-list">
-                            <div>
-                                <h3>Lote 001</h3>
-                                <iconify-icon class="text-white text-2xl mr-2" icon="ion:ticket-outline"></iconify-icon>
-                            </div>
-                            <strong>Ingresso: R$ 790,00</strong>
-                            <p>21/07/2025 - 10/08/2025</p>
-                        </li>
-                        <li class="ticket-list opacity-20">
-                            <div>
-                                <h3>Lote 002</h3>
-                                <iconify-icon class="text-white text-2xl mr-2" icon="ion:ticket-outline"></iconify-icon>
-                            </div>
-                            <strong>Ingresso: R$ 890,00</strong>
-                            <p>11/08/2025 - 30/08/2025</p>
-                        </li>
-                        <li class="ticket-list opacity-20">
-                            <div>
-                                <h3>Lote 003</h3>
-                                <iconify-icon class="text-white text-2xl mr-2" icon="ion:ticket-outline"></iconify-icon>
-                            </div>
-                            <strong>Ingresso: R$ 990,00</strong>
-                            <p>01/09/2025 - 15/09/2025</p>
-                        </li>
-                    </ul>
-                    -->
                     <div class="w-1/3 mx-[2px] pt-4 border-t border-white">
                         <div class="bg-gradient-to-b from-[#7DC241] to-[#379D1F] py-12 relative overflow-hidden">
                             <p class="text-white text-center text-sm mb-2">Até 20 de julho 2025</p>
@@ -302,9 +324,10 @@
                 </div>
             </div>
         </section>
+        -->
         <section class="bg-colorido bg-center bg-cover bg-no-repeat">
             <div class="container my-16">
-                <div class="w-2/3 mx-auto">
+                <div class="xl:w-2/3 mx-auto">
                     <h2 class="titulo-sessao text-white text-sombra-simples">Seja um líder admirado e valorizado. A força que desbloqueia o potencial da equipe.</h2>
                     <h3 class="text-white text-sombra-simples">Ter a força de vendas engajada e cada dia mais produtiva é o que diferencia líderes comuns de líderes que movem o mercado. Liderança nutritiva para se obter engajamento e atitude pró mudança.</h3>
                     <a href="/#form" class="scroll-smooth">
@@ -321,7 +344,9 @@
                             <p class="text-white text-xs">1º Seminário FarmaPower</p>
                         </div>
                         <div class="rodape-info">
-                            <p class="text-white text-xs">GTX100 Incentivos</p>
+                            <p class="text-white text-xs">Apoio:</p>
+                            <img src="./assets/img/GTX100 Logo Branco.png" class="h-8 ml-4" />
+                            <img src="./assets/img/salesforce-seeklogo.png" class="h-12 ml-4" />
                         </div>
                         <div class="rodape-info">
                             <iconify-icon class="text-white text-2xl cursor-pointer mr-2"
