@@ -1,12 +1,29 @@
-# landing-page-farmapower
+# Landing Page – FarmaPower
 
-### Melhorias
+Landing page criada para divulgar um seminário exclusivo voltado a **diretores e gestores do setor farmacêutico**, com foco em conversão e direcionamento para inscrição.
 
-- [-] Refazer layout de acordo com PPT seminário 2021
-- [-] Configurar menu lateral na versão Mobile
-- [X] Configurar versão mobile e tablet
-- [X] Converter o PainelPix como um elemento a ser criado no momento do envio do form
-- [X] Separar as funções de index.ts em arquivos separados e deixar apenas ações do usuário
-- [X] Corrigir período dos lotes
-- [X] Otimizar imagens
-- [X] Colocar QRCode e Chave Pix definitivos
+---
+
+## 🎯 Objetivo
+
+Divulgar e promover a inscrição em um seminário institucional da FarmaPower, destacando os benefícios do evento e facilitando o contato de interessados.
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+- **HTML5** – Estrutura semântica do conteúdo
+- **CSS3 / Tailwind CSS** – Estilização responsiva e moderna
+- **JavaScript (Vanilla)** – Funcionalidades interativas básicas
+- **Webpack** – Empacotamento e otimização de assets (se aplicável)
+
+---
+
+## 📁 Estrutura do Projeto
+
+- `src/`: Arquivos-fonte da landing page
+- `assets/`: Imagens, ícones e arquivos de mídia
+- `dist/`: Versão otimizada para deploy
+- `index.html`: Página principal
+- `tailwind.config.js`: Configuração de estilo
+- `webpack.config.js`: Configuração de build (se usado)
