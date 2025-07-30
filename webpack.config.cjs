@@ -46,6 +46,7 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: 'style.css',
+            ignoreOrder: true,
         })
     ],
     devServer: {

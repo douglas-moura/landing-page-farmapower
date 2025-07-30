@@ -12,6 +12,7 @@ abrirMenu?.addEventListener('click', (): void => { toggleMenu() })
 const fecharMenu = document.getElementById('icone-fechar-menu') as HTMLElement
 fecharMenu?.addEventListener('click', (): void => { toggleMenu() })
 
+/*
 const btnFormInscrever = document.getElementById('btn-form-inscrever') as HTMLButtonElement
 btnFormInscrever.addEventListener('click', (event: MouseEvent): void => {
     event.preventDefault()
@@ -36,3 +37,4 @@ btnFormInscrever.addEventListener('click', (event: MouseEvent): void => {
         }
     }
 })
+*/

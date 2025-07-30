@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --mode development",
-    "build": "set NODE_ENV=production && webpack --mode production",
+    "build": "set NODE_ENV=production && webpack",
     "otimizar": "tsx src/assets/functions/otimizarImagens.ts"
   },
   "keywords": [],
