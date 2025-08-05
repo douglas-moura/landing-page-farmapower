@@ -5,6 +5,7 @@ import { popup } from './assets/components/mensagemPopup'
 import { pixPainel } from './assets/components/pixPainel'
 import { enviarEmail } from './assets/functions/enviarEmail'
 import { toggleMenu } from './assets/functions/toggleMenu'
+import { iniciarContagemRegressiva } from './assets/functions/contagemRegressiva'
 
 const abrirMenu = document.getElementById('icone-abrir-menu') as HTMLElement
 abrirMenu?.addEventListener('click', (): void => { toggleMenu() })
@@ -38,3 +39,7 @@ btnFormInscrever.addEventListener('click', (event: MouseEvent): void => {
     }
 })
 */
+
+// Exemplo: contar até 31 de dezembro deste ano
+const dataFinal = new Date(2025, 8, 16, 7, 59, 59)
+iniciarContagemRegressiva(dataFinal)

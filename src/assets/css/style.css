@@ -203,6 +203,14 @@
     .ticket-list strong {
         @apply text-2xl
     }
+
+    .box-contador {
+        @apply w-1/5 bg-white shadow rounded-xl p-8 aspect-square flex flex-col items-center justify-center
+    }
+
+    .num-contador {
+        @apply text-5xl font-semibold
+    }
 }
 
 @layer utilities {
